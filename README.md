@@ -7,9 +7,17 @@ This is a diary on learned lessons while learning Raku.
    * [Pitfalls](#pitfalls)
    * [Life savers](#life-savers)
    * [Junctions](#junctions)
+* [Bash completion for Raku tools (2024-11-02)](#bash-completion-for-raku-tools-2024-11-02)
+* [Using and creating modules (2024-10-31)](#using-and-creating-modules-2024-10-31)
+   * [Maintaining Raku distros with mi6](#maintaining-raku-distros-with-mi6)
+   * [Creating a Raku module for zef](#creating-a-raku-module-for-zef)
+   * [Zef just works(tm)](#zef-just-workstm)
+   * [How to delete a module from zef](#how-to-delete-a-module-from-zef)
+* [Entering the town of Raku (2024-04-28)](#entering-the-town-of-raku-2024-04-28)
+   * [Variables and containers](#variables-and-containers)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: renormalist, at: Do 7. Nov 03:57:07 CET 2024 -->
+<!-- Added by: renormalist, at: Fr 8. Nov 18:09:12 CET 2024 -->
 
 <!--te-->
 
@@ -162,6 +170,22 @@ The fez cleanup is on its way to stick within 24h:
     fez remove 'Data::DPath6:ver<0.0.1>:auth<zef:renormalist>'
     fez remove 'Data::DPath6:ver<0.0.2>:auth<zef:renormalist>'
 
+Why the 24 hours? From what I read here:
+
+- https://github.com/tony-o/raku-fez/blob/master/docs/Fez/API.md#remove
+- https://github.com/tony-o/raku-fez/blob/master/lib/Fez/API.rakumod#L310
+
+and
+
+- https://deathbyperl6.com/faq-zef-ecosystem/
+- https://deathbyperl6.com/fez-zef-a-raku-ecosystem-and-auth/
+
+I *speculate* that the zef ecosystem is meant to store modules
+eternally and the 24h is the grace period to recover from freakups
+like contained sensitive data, so it maybe keeps the files in some
+interstage?
+
+More authoritative answers welcome.
 
 Entering the town of Raku (2024-04-28)
 ======================================
