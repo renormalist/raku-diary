@@ -92,3 +92,14 @@ the example the smartmatch
 ... `~~ Same|Less`
 
 matches if left side matches `Same` or if it matches `Less`.
+
+
+
+Entering the town of Raku (2024-04-28)
+======================================
+
+Diane, it's April '24, weather is good, partly cloudy, 21°C, entering
+the town of sigils formerly known as #Perl6. I just installed the
+latest Raku and put Camelia on a screenshot.
+
+![Camelia on a screenshot which shows installing Raku](img/screenshot-with-rakubrew-and-camelia.png?raw=true "Camelia on a screenshot")
