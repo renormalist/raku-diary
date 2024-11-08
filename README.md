@@ -64,9 +64,11 @@ Pitfalls
 
 - `<1 2 3>` is more than just quote words but creates allomorphs. You need it.
 
-- To create "nothing" in lists, instead of Perl's () relying on list flattening,  you can return Empty
+- To create "nothing" in lists, instead of Perl's () relying on list
+  flattening, you can return `Empty`
 
-- undefined values warn loud when used because of missing type, so you often need to handle it explicitly
+- undefined values warn loud when used because of missing type, so you
+  often need to handle it explicitly
 
 - `Nil` is not `Any`
 
@@ -105,7 +107,7 @@ matches if left side matches `Same` or if it matches `Less`.
 Bash completion for Raku tools (2024-11-02)
 ===========================================
 
-Some #RakuLang cmdline tools go smoother with TAB completion. Try
+Some Raku cmdline tools go smoother with TAB completion. Try
 
 - https://github.com/renormalist/raku-tools-bash-completion
 
@@ -120,7 +122,7 @@ You can use App::mi6 as found in
 
  - https://raku-intro.readthedocs.io/en/latest/modules.html#using-app-mi6
 
-to maintain a #RakuLang module distro.
+to maintain a Raku module distro.
 
 Creating a Raku module for zef
 ------------------------------
