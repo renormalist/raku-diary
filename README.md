@@ -94,12 +94,98 @@ the example the smartmatch
 matches if left side matches `Same` or if it matches `Less`.
 
 
+Bash completion for Raku tools (2024-11-02)
+===========================================
+
+Some #RakuLang cmdline tools go smoother with TAB completion. Try
+
+- https://github.com/renormalist/raku-tools-bash-completion
+
+
+Using and creating modules (2024-10-31)
+=======================================
+
+Maintaining Raku distros with mi6
+---------------------------------
+
+You can use App::mi6 as found in
+
+ - https://raku-intro.readthedocs.io/en/latest/modules.html#using-app-mi6
+
+to maintain a #RakuLang module distro.
+
+Creating a Raku module for zef
+------------------------------
+
+Ok, I think I'm in the game.
+
+- https://raku.land/zef:renormalist
+
+Adding "zef:renormalist" manually to META6.json took me longer then
+neccesary, learning to read would help. :)
+
+So that's how you become a Raku module author:
+
+    $ zef register
+    $ mi6 new Foo::Bar
+    # setup git(hub) repo origin
+    # add "auth:AUTHORNAME" to META6.json
+    # hack hack hack
+    # edit Changes
+    # git commit
+    $ mi6 test
+    $ mi6 release
+
+Easy money.
+
+Zef just works(tm)
+------------------
+
+The crazy thing is that I never had to fiddle with all the usual
+modern obstacles, like registrations, confirmations, captchas, etc..
+
+It just worked.
+
+I spent most of my time trying to find what complicated process to
+follow when in fact there was none.
+
+The zef ecosystem is runnng on AWS S3 storage and lambdas. My inner
+oldschool me needs to relax a bit from not really seeing what's going
+on.
+
+
+How to delete a module from zef
+-------------------------------
+
+The fez cleanup is on its way to stick within 24h:
+
+    fez remove 'Data::DPath6:ver<0.0.1>:auth<zef:renormalist>'
+    fez remove 'Data::DPath6:ver<0.0.2>:auth<zef:renormalist>'
+
 
 Entering the town of Raku (2024-04-28)
 ======================================
 
 Diane, it's April '24, weather is good, partly cloudy, 21°C, entering
-the town of sigils formerly known as #Perl6. I just installed the
+the town of sigils formerly known as Perl6. I just installed the
 latest Raku and put Camelia on a screenshot.
 
-![Camelia on a screenshot which shows installing Raku](img/screenshot-with-rakubrew-and-camelia.png?raw=true "Camelia on a screenshot")
+![Camelia on a screenshot which shows installing Raku](img/screenshot-with-rakubrew-and-camelia.png?raw=true "Camelia on a screenshot which shows installing Raku")
+
+
+Variables and containers
+------------------------
+
+First steps are adapting to new wording of concepts I know. My
+old-school Perl'sonality knows scalars, arrays, hashes, functions.
+
+It's now
+
+- $ - Mu - no type constraint
+- @ - Positional - eg. Array
+- % - Associative - eg. Hash
+- & - Callable - eg. Subs
+
+respectively all the derived variants.
+
+See https://docs.raku.org/language/variables
