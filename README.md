@@ -38,7 +38,7 @@ you know from Perl.
 The keyword is "allomorphs". My revelation came from those two links:
 
 - https://rakujourney.wordpress.com/2024/04/18/allomorphs-unicode/
-- https://github.com/rakudo/rakudo/blob/
+- https://github.com/rakudo/rakudo/blob/main/src/core.c/allomorphs.rakumod
 
 Operators to help you make the code DWIM
 ----------------------------------------
@@ -60,7 +60,7 @@ Pitfalls
 
 - undefined values warn loud when used because of missing type, so you often need to handle it explicitly
 
-- Nil is not Any
+- `Nil` is not `Any`
 
 Life savers
 -----------
@@ -83,10 +83,10 @@ Life savers
 Junctions
 ---------
 
-Did you see the Same|Less above?
+Did you see the `Same|Less` above?
 
-That's a junction, i.e. multiple values in one place, here Same and
-Less which all get processed implicitly without you doing stunts. In
+That's a junction, i.e. multiple values in one place, here `Same` and
+`Less` which all get processed implicitly without you doing stunts. In
 the example the smartmatch
 
 ... `~~ Same|Less`
