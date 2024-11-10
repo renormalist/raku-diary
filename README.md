@@ -17,7 +17,7 @@ This is a diary on learned lessons while learning Raku.
    * [Variables and containers](#variables-and-containers)
 
 <!-- Created by https://github.com/ekalinin/github-markdown-toc -->
-<!-- Added by: renormalist, at: Fr 8. Nov 18:09:12 CET 2024 -->
+<!-- Added by: renormalist, at: So 10. Nov 15:29:25 CET 2024 -->
 
 <!--te-->
 
@@ -31,6 +31,8 @@ My first lesson was:
 
 Unlike Perl, Raku is really a typed language
 --------------------------------------------
+
+<dl><dd>
 
 To program in Raku in a Perl DWIM way ("Do What I Mean") means to know
 the types and operators which cover that magic that was built into
@@ -47,18 +49,24 @@ The keyword is "allomorphs". My revelation came from those two links:
 
 - https://rakujourney.wordpress.com/2024/04/18/allomorphs-unicode/
 - https://github.com/rakudo/rakudo/blob/main/src/core.c/allomorphs.rakumod
+</dd></dl>
 
 Operators to help you make the code DWIM
 ----------------------------------------
+
+<dl><dd>
 
 - `<1 2 3>` ... like qw() but create allomorphs
 
 - `cmp` ... compare type-aware, returns a type `Order` (values `Same`, `More`, `Less`) you can feed into smart match
 
 - `~~` ... smart match
+</dd></dl>
 
 Pitfalls
 --------
+
+<dl><dd>
 
 - `foo(1, 2, 3)` is not `foo([1, 2, 3])` is not `foo([<1 2 3>])`
 
@@ -71,9 +79,12 @@ Pitfalls
   often need to handle it explicitly
 
 - `Nil` is not `Any`
+</dd></dl>
 
 Life savers
 -----------
+
+<dl><dd>
 
 - `dd()` ... simple built-in Data::Dumper:
 
@@ -89,9 +100,12 @@ Life savers
 
   - https://raku.land/github:nkh/Data::Dump::Tree
 
+</dd></dl>
 
 Junctions
 ---------
+
+<dl><dd>
 
 Did you see the `Same|Less` above?
 
@@ -102,14 +116,18 @@ the example the smartmatch
 ... `~~ Same|Less`
 
 matches if left side matches `Same` or if it matches `Less`.
+</dd></dl>
 
 
 Bash completion for Raku tools (2024-11-02)
 ===========================================
 
+<dl><dd>
+
 Some Raku cmdline tools go smoother with TAB completion. Try
 
 - https://github.com/renormalist/raku-tools-bash-completion
+</dd></dl>
 
 
 Using and creating modules (2024-10-31)
@@ -118,14 +136,19 @@ Using and creating modules (2024-10-31)
 Maintaining Raku distros with mi6
 ---------------------------------
 
+<dl><dd>
+
 You can use App::mi6 as found in
 
  - https://raku-intro.readthedocs.io/en/latest/modules.html#using-app-mi6
 
 to maintain a Raku module distro.
+</dd></dl>
 
 Creating a Raku module for zef
 ------------------------------
+
+<dl><dd>
 
 Ok, I think I'm in the game.
 
@@ -147,9 +170,12 @@ So that's how you become a Raku module author:
     $ mi6 release
 
 Easy money.
+</dd></dl>
 
 Zef just works(tm)
 ------------------
+
+<dl><dd>
 
 The crazy thing is that I never had to fiddle with all the usual
 modern obstacles, like registrations, confirmations, captchas, etc..
@@ -162,10 +188,13 @@ follow when in fact there was none.
 The zef ecosystem is runnng on AWS S3 storage and lambdas. My inner
 oldschool me needs to relax a bit from not really seeing what's going
 on.
+</dd></dl>
 
 
 How to delete a module from zef
 -------------------------------
+
+<dl><dd>
 
 The fez cleanup is on its way to stick within 24h:
 
@@ -188,19 +217,25 @@ like contained sensitive data, so it maybe keeps the files in some
 interstage?
 
 More authoritative answers welcome.
+</dd></dl>
 
 Entering the town of Raku (2024-04-28)
 ======================================
+
+<dl><dd>
 
 Diane, it's April '24, weather is good, partly cloudy, 21°C, entering
 the town of sigils formerly known as Perl6. I just installed the
 latest Raku and put Camelia on a screenshot.
 
 ![Camelia on a screenshot which shows installing Raku](img/screenshot-with-rakubrew-and-camelia.png?raw=true "Camelia on a screenshot which shows installing Raku")
+</dd></dl>
 
 
 Variables and containers
 ------------------------
+
+<dl><dd>
 
 First steps are adapting to new wording of concepts I know. My
 old-school Perl'sonality knows scalars, arrays, hashes, functions.
@@ -215,3 +250,4 @@ It's now
 respectively all the derived variants.
 
 See https://docs.raku.org/language/variables
+</dd></dl>
